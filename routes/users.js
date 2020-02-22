@@ -74,7 +74,7 @@ router.get('/:id', (req, res, next) => {
 	)
 	const userInfo = data.find(item => Number(item.id) === Number(id))
 	if (!userInfo) {
-		res.status(500).json({
+		res.status(404).json({
 			message: 'no user found'
 		})
 	}
